@@ -1,0 +1,47 @@
+
+0. Hacer un fork del repositorio principal desde github
+1. Clonar el repositorio fork
+    git clone <repo_name>
+2. Entrar a la carpeta y comprobar que todo este bien con
+    git status
+3. Seguir la siguiente secuencia para trabajar:
+    3.1. Hacer una rama con el comando
+        git branch <branch_name>
+    3.2. Pasarse a la rama con el comando
+        git checkout <branch_name>
+    3.3. Si se require regresar a la rama principal utilizar
+        git checkout main
+    3.4. Trabajar en la rama todo lo que se desee, para añadir a la staging area
+        git add .  ó git add <filename>
+    3.5. Hacer un commit con información útil
+        git commit -m "Mensaje principal" -m "Mensaje secundario"
+    3.6. Repetir desde el paso 3.4. al 3.5. hasta estar satisfecho, subir al repo con
+        git push origin <branch_name>  ó git push origin main
+4. Regresar a la rama principal
+    git checkout main
+5. Pasar los cambios a la rama principal
+    git merge <branch_name>  o  git merge <branch_name> --no-ff
+6. Subir los cambios
+    git push origin main
+7. Hacer un pull request
+8. En la pagina de github de tu fork dar clic
+    contribute y despues en 
+
+
+
+
+Configurar el repositorio remote del fork, solo se hace la primera vez
+
+git remote -v
+git remote add upstream <repo_url>
+git remote -v
+
+Sincronizar los cambios del fork o presionar el boton en github de sync fork
+haber configurado el remote upstream
+git fetch upstream
+git branch -a
+git checkout upstream/main
+git checkout main
+git merge upstream/main
+
+     
